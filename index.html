@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esfirraria Delícia - Cardápio</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #222;
+            color: #fff;
+            margin: 0;
+            padding-top: 70px;
+        }
+
+        header {
+            background-color: #333;
+            padding: 10px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 9999;
+        }
+
+        .navbar-brand,
+        .navbar-nav .nav-link {
+            color: #fff;
+        }
+
+        .navbar-nav .nav-link {
+            padding: 0 10px;
+        }
+
+        .btn-cta {
+            background-color: #ff5500;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 4px;
+        }
+
+        @media (max-width: 768px) {
+            .navbar-nav {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .navbar-brand,
+            .navbar-toggler,
+            .btn-cta {
+                margin: 10px auto;
+                display: block;
+                text-align: center;
+            }
+
+            .section-img {
+                max-width: 100%;
+                width: auto;
+                height: auto;
+            }
+
+            .benefit-item {
+                text-align: center;
+                margin-bottom: 30px;
+            }
+
+            .highlight-item {
+                text-align: center;
+                margin-bottom: 30px;
+            }
+        }
+
+        .section {
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 36px;
+            margin-bottom: 30px;
+        }
+
+        .section-description {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .section-img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 30px;
+        }
+
+        .benefits {
+            margin-top: 30px;
+        }
+
+        .benefit-item {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .benefit-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .benefit-text {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        .highlights {
+            background-color: #333;
+            padding: 60px 0;
+        }
+
+        .highlight-item {
+            margin-bottom: 30px;
+        }
+
+        .highlight-image {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 15px;
+        }
+
+        .highlight-price {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ff5500;
+            margin-bottom: 5px;
+        }
+
+        .highlight-name {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .highlight-description {
+            font-size: 16px;
+        }
+
+        .esfiha-menu {
+            background-color: #222;
+            padding: 60px 0;
+        }
+
+        .esfiha-card {
+            background-color: #333;
+            border-radius: 5px;
+            margin-bottom: 30px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .esfiha-card-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .esfiha-card-name {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .esfiha-card-description {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .esfiha-card-price {
+            font-size: 18px;
+            font-weight: bold;
+            color: #ff5500;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md">
+            <a class="navbar-brand" href="#home">ED</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#destaques">Destaques</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#cardapio">Cardápio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#promocoes">Promoções</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#depoimentos">Depoimentos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contato">Contato</a>
+                    </li>
+                </ul>
+            </div>
+            <a class="btn btn-cta" href="#">Faça seu pedido agora</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section container" id="home">
+            <div class="section-content">
+                <div class="section-text">
+                    <h2 class="section-title">Bem-vindo à Esfirraria Delícia</h2>
+                    <p class="section-description">Experimente as melhores esfihas feitas com ingredientes frescos e
+                        sabores irresistíveis.</p>
+                </div>
+                <div class="section-img">
+                    <img src="https://via.placeholder.com/800x500" alt="Imagem Placeholder" class="img-fluid">
+                </div>
+            </div>
+        </section>
+
+        <section class="highlights" id="destaques">
+            <div class="container">
+                <h2 class="section-title">Destaques</h2>
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="esfiha-card">
+                            <img src="https://via.placeholder.com/300" alt="Destaque 1" class="esfiha-card-image">
+                            <h5 class="esfiha-card-name">Esfirra Especial</h5>
+                            <p class="esfiha-card-description">Deliciosa esfirra com uma combinação única de
+                                ingredientes frescos e tempero especial.</p>
+                            <p class="esfiha-card-price">R$ 6,90</p>
+                            <a href="#" class="btn btn-primary">Adicionar ao carrinho</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="esfiha-card">
+                            <img src="https://via.placeholder.com/300" alt="Destaque 2" class="esfiha-card-image">
+                            <h5 class="esfiha-card-name">Esfirra Vegetariana</h5>
+                            <p class="esfiha-card-description">Uma opção saudável e saborosa para os amantes de
+                                vegetais. Ingredientes frescos e seleção especial de temperos.</p>
+                            <p class="esfiha-card-price">R$ 6,90</p>
+                            <a href="#" class="btn btn-primary">Adicionar ao carrinho</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="esfiha-card">
+                            <img src="https://via.placeholder.com/300" alt="Destaque 3" class="esfiha-card-image">
+                            <h5 class="esfiha-card-name">Esfirra Especialíssima</h5>
+                            <p class="esfiha-card-description">A experiência gastronômica definitiva. Nossa esfirra
+                                especialíssima com ingredientes exclusivos e preparo artesanal.</p>
+                            <p class="esfiha-card-price">R$ 6,90</p>
+                            <a href="#" class="btn btn-primary">Adicionar ao carrinho</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="esfiha-card">
+                            <img src="https://via.placeholder.com/300" alt="Destaque 4" class="esfiha-card-image">
+                            <h5 class="esfiha-card-name">Esfirra de Carne</h5>
+                            <p class="esfiha-card-description">A clássica esfirra de carne, com generoso recheio de
+                                carne moída temperada e especiarias.</p>
+                            <p class="esfiha-card-price">R$ 6,90</p>
+                            <a href="#" class="btn btn-primary">Adicionar ao carrinho</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="esfiha-menu section" id="cardapio">
+            <div class="container">
+                <h2 class="section-title">Cardápio</h2>
+
+                <div class="row" id="esfihaList">
+                    <!-- Lista de esfihas -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <!-- Rodapé -->
+    </footer>
+
+    <script>
+        var esfihas = [
+            { nome: 'Carne', ingredientes: 'Carne moída temperada, cebola, tomate', preco: 4.90 },
+            { nome: 'Frango', ingredientes: 'Frango desfiado, requeijão cremoso', preco: 4.90 },
+            { nome: 'Queijo', ingredientes: 'Mussarela, catupiry', preco: 4.90 },
+            { nome: 'Calabresa', ingredientes: 'Calabresa, cebola', preco: 4.90 },
+            { nome: 'Portuguesa', ingredientes: 'Presunto, mussarela, cebola, ovo, azeitonas', preco: 5.90 },
+            { nome: 'Vegetariana', ingredientes: 'Brócolis, palmito, milho, ervilha, tomate', preco: 5.90 },
+            { nome: 'Frango com Catupiry', ingredientes: 'Frango desfiado, catupiry', preco: 5.90 },
+            { nome: 'Escarola com Bacon', ingredientes: 'Escarola refogada, bacon, mussarela', preco: 5.90 },
+            { nome: 'Queijo com Tomate Seco', ingredientes: 'Mussarela, tomate seco', preco: 5.90 },
+            { nome: 'Pepperoni', ingredientes: 'Pepperoni, mussarela', preco: 6.90 }
+        ];
+
+        var esfihaMenuHtml = '';
+        esfihas.forEach(function (esfiha) {
+            esfihaMenuHtml += `
+            <div class="col-md-4">
+                <div class="esfiha-card">
+                    <img src="https://via.placeholder.com/720" alt="${esfiha.nome}" class="esfiha-card-image">
+                    <h5 class="esfiha-card-name">${esfiha.nome}</h5>
+                    <p class="esfiha-card-description">${esfiha.ingredientes}</p>
+                    <p class="esfiha-card-price">R$ ${esfiha.preco}</p>
+                    <a href="#" class="btn btn-primary">Adicionar ao carrinho</a>
+                </div>
+            </div>
+            `;
+        });
+
+        document.querySelector('#esfihaList').innerHTML = esfihaMenuHtml;
+    </script>
+</body>
+
+</html>
