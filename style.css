@@ -20,13 +20,10 @@ header {
     z-index: 9999;
 }
 
-.navbar-brand,
-.navbar-nav .nav-link {
-    color: #fff;
-}
 
-.navbar-nav .nav-link {
-    padding: 0 10px;
+.navbar-brand,
+.btn-cta {
+    margin: 0px 10vw;
 }
 
 .btn-cta {
@@ -39,16 +36,10 @@ header {
 }
 
 @media (max-width: 768px) {
-    .navbar-nav {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-    }
 
     .navbar-brand,
-    .navbar-toggler,
     .btn-cta {
-        margin: 10px auto;
+        margin: 0px auto;
         display: block;
         text-align: center;
     }
@@ -58,21 +49,25 @@ header {
         width: auto;
         height: auto;
     }
-
-    .benefit-item {
-        text-align: center;
-        margin-bottom: 30px;
-    }
-
-    .highlight-item {
-        text-align: center;
-        margin-bottom: 30px;
-    }
 }
+
+/* SECTION DESTAQUES */
 
 .section {
     padding: 60px 0;
-    text-align: center;
+}
+
+#destaques {
+    /* min-height: 90vh; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-destaque{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .section-title {
@@ -85,73 +80,48 @@ header {
     margin-bottom: 30px;
 }
 
+.social-media {
+    margin-top: 30px;
+    padding: 60px auto;
+    list-style: none;
+    width: 90%;
+}
+
+.fab {
+    font-size: 60px;
+}
+
+.benefit-icon {
+    font-size: 30px;
+    margin: 20px;
+}
+
+.benefit-title {
+    font-size: 20px;
+}
+
 .section-img {
     max-width: 100%;
     height: auto;
     margin-bottom: 30px;
 }
 
-.benefits {
-    margin-top: 30px;
-}
-
-.benefit-item {
-    margin-bottom: 30px;
-    text-align: center;
-}
-
-.benefit-icon {
-    font-size: 40px;
-    margin-bottom: 15px;
-}
-
-.benefit-text {
-    font-size: 18px;
-    margin-top: 10px;
-}
-
-.highlights {
-    background-color: #333;
-    padding: 60px 0;
-}
-
-.highlight-item {
-    margin-bottom: 30px;
-}
-
-.highlight-image {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 15px;
-}
-
-.highlight-price {
-    font-size: 24px;
-    font-weight: bold;
-    color: #ff5500;
-    margin-bottom: 5px;
-}
-
-.highlight-name {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-.highlight-description {
-    font-size: 16px;
-}
+/* MENU DE ESFIHA */
 
 .esfiha-menu {
-    background-color: #222;
+    background-color: #333;
     padding: 60px 0;
 }
 
 .esfiha-card {
-    background-color: #333;
+    background-color: #444;
+    /* height: 475px; */
     border-radius: 5px;
     margin-bottom: 30px;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
 }
 
@@ -178,4 +148,17 @@ header {
     font-size: 18px;
     font-weight: bold;
     color: #ff5500;
+}
+
+.option {
+    background-color: #555;
+    padding: 10px 0px 5px;
+    width: 50%;
+}
+
+#btn-plus,
+#btn-sub {
+    height: 50px;
+    min-width: 70px;
+    font-size: 30px;
 }
