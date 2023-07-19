@@ -5,95 +5,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
-    <title>Esfiharia Delícia - Cardápio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="src/css/style.css">
+    <title>Esfiha Delícia - Cardápio</title>
 </head>
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-md">
-            <a class="navbar-brand" href="#home">ED</a>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#destaques">Destaques</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#cardapio">Cardápio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#promocoes">Promoções</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#depoimentos">Depoimentos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contato">Contato</a>
-                    </li>
-                </ul>
-            </div>
+        <nav class="navbar navbar-expand-md justify-content-between">
+            <h1 class="navbar-brand">ED</h1>
             <a class="btn btn-cta" href="#">Faça seu pedido agora</a>
         </nav>
     </header>
 
     <main>
-        <section class="section container" id="home">
-            <div class="section-content">
-                <div class="section-text">
-                    <h2 class="section-title">Bem-vindo à Esfiharia Delícia</h2>
-                    <p class="section-description">Experimente as melhores esfihas feitas com ingredientes frescos e
-                        sabores irresistíveis.</p>
+        <section class="section container" id="destaques">
+            <div class="row section-content">
+                <div class="col-md-6 order-md-1 text-destaque">
+                    <div class="section-text">
+                        <h2 class="section-title">Bem-vindo à Esfiha Delícia</h2>
+                        <p class="section-description">Experimente as melhores esfihas feitas com<br>ingredientes
+                            frescos e sabores irresistíveis.</p>
+                        <h2>Siga-nos nas redes sociais:</h2>
+                        <ul class="social-media d-flex justify-content-between">
+                            <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        </ul>
+                    </div>
+                    <!-- <div class="beneficits">
+                        <h2 class="section-title">Benefícios</h2>
+                        <div class="row">
+                            <div class="col-md-6 benefit-item d-flex align-items-center">
+                                <i class="benefit-icon fas fa-clock"></i>
+                                <h3 class="benefit-title">Rápido e Prático</h3>
+                            </div>
+                            <div class="col-md-6 benefit-item d-flex align-items-center">
+                                <i class="benefit-icon fas fa-utensils"></i>
+                                <h3 class="benefit-title">Ingredientes Frescos</h3>
+                            </div>
+                            <div class="col-md-6 benefit-item d-flex align-items-center">
+                                <i class="benefit-icon fas fa-heart"></i>
+                                <h3 class="benefit-title">Amor em cada Esfiha</h3>
+                            </div>
+                            <div class="col-md-6 benefit-item d-flex align-items-center">
+                                <i class="benefit-icon fas fa-comments"></i>
+                                <h3 class="benefit-title">Atendimento Amigável</h3>
+                            </div>
+                        </div>
+                    </div> -->
                 </div>
-                <div class="section-img">
+                <div class="col-md-6 order-md-2">
                     <img src="https://via.placeholder.com/800x500" alt="Imagem Placeholder" class="img-fluid">
-                </div>
-            </div>
-        </section>
-
-        <section class="highlights" id="destaques">
-            <div class="container">
-                <h2 class="section-title">Destaques</h2>
-                <div class="row">
-                    <div class="col-lg-3 col-md-6 col-12">
-                        <div class="esfiha-card">
-                            <img src="https://via.placeholder.com/300" alt="Destaque 1" class="esfiha-card-image">
-                            <h5 class="esfiha-card-name">Esfiha Especial</h5>
-                            <p class="esfiha-card-description">Deliciosa esfiha com uma combinação única de
-                                ingredientes frescos e tempero especial.</p>
-                            <p class="esfiha-card-price">R$ 6,90</p>
-                            <a href="#" class="btn btn-primary">Adicionar ao carrinho</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-12">
-                        <div class="esfiha-card">
-                            <img src="https://via.placeholder.com/300" alt="Destaque 2" class="esfiha-card-image">
-                            <h5 class="esfiha-card-name">Esfiha Vegetariana</h5>
-                            <p class="esfiha-card-description">Uma opção saudável e saborosa para os amantes de
-                                vegetais. Ingredientes frescos e seleção especial de temperos.</p>
-                            <p class="esfiha-card-price">R$ 6,90</p>
-                            <a href="#" class="btn btn-primary">Adicionar ao carrinho</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-12">
-                        <div class="esfiha-card">
-                            <img src="https://via.placeholder.com/300" alt="Destaque 3" class="esfiha-card-image">
-                            <h5 class="esfiha-card-name">Esfiha Especialíssima</h5>
-                            <p class="esfiha-card-description">A experiência gastronômica definitiva. Nossa esfiha
-                                especialíssima com ingredientes exclusivos e preparo artesanal.</p>
-                            <p class="esfiha-card-price">R$ 6,90</p>
-                            <a href="#" class="btn btn-primary">Adicionar ao carrinho</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-12">
-                        <div class="esfiha-card">
-                            <img src="https://via.placeholder.com/300" alt="Destaque 4" class="esfiha-card-image">
-                            <h5 class="esfiha-card-name">Esfiha de Carne</h5>
-                            <p class="esfiha-card-description">A clássica esfiha de carne, com generoso recheio de
-                                carne moída temperada e especiarias.</p>
-                            <p class="esfiha-card-price">R$ 6,90</p>
-                            <a href="#" class="btn btn-primary">Adicionar ao carrinho</a>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
@@ -109,11 +72,7 @@
         </section>
     </main>
 
-    <footer>
-        <!-- Rodapé -->
-    </footer>
-
-    <script src="script.js"></script>
+    <script src="src/js/script.js"></script>
 </body>
 
 </html>
