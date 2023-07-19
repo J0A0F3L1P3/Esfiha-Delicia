@@ -20,7 +20,13 @@ esfihas.forEach(function (esfiha) {
             <h5 class="esfiha-card-name">${esfiha.nome}</h5>
             <p class="esfiha-card-description">${esfiha.ingredientes}</p>
             <p class="esfiha-card-price">R$ ${esfiha.preco}</p>
-            <a href="#" class="btn btn-primary">Adicionar ao carrinho</a>
+            <div class="option">
+                <div class="display">
+                    <h4 id="qtd">0</h4>
+                </div>
+                <a href="#" id="btn-plus" class="btn btn-primary" onclcick="adicionarList(this, 1)">-</a>
+                <a href="#" id="btn-sub" class="btn btn-primary" onclcick="removerList(this, -1)">+</a>
+            </div>
         </div>
     </div>
     `;
