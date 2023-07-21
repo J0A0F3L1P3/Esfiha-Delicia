@@ -13,13 +13,19 @@ body {
 
 header {
     background-color: #333;
-    padding: 10px;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 9999;
 }
 
+.navbar {
+    height: 8vh;
+}
+
+.navbar input{
+    display: none;
+}
 
 .navbar-brand,
 .btn-cta {
@@ -35,20 +41,50 @@ header {
     border-radius: 4px;
 }
 
-@media (max-width: 768px) {
+/* Lista de pedidos */
 
-    .navbar-brand,
-    .btn-cta {
-        margin: 0px auto;
-        display: block;
-        text-align: center;
-    }
+#pedidoList {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
 
-    .section-img {
-        max-width: 100%;
-        width: auto;
-        height: auto;
-    }
+    margin-top: 20px;
+    position: absolute;
+    top: 5vh;
+    right: -100vh;
+    z-index: 99;
+    background-color: #555;
+    width: 400px;
+    padding: 20px;
+    transition: 0.5s;
+}
+
+.pedido-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    width: 80%;
+}
+
+#listaPedidos {
+    width: 80%;
+    list-style: none;
+    margin-top: 10px;
+}
+
+#listaPedidos li {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.esfiha-list-name {
+    width: 80%;
+}
+
+#listaBtn:checked ~ #pedidoList {
+    right: 4.5vw;
+    transition: 0.5s;
 }
 
 /* SECTION DESTAQUES */
@@ -84,7 +120,7 @@ header {
     margin-top: 30px;
     padding: 60px auto;
     list-style: none;
-    width: 90%;
+    width: 70%;
 }
 
 .fab {
@@ -111,6 +147,13 @@ header {
 .esfiha-menu {
     background-color: #333;
     padding: 60px 0;
+    width: 100%;
+}
+
+#esfihaList {
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    column-gap: 30px;
 }
 
 .esfiha-card {
@@ -159,6 +202,28 @@ header {
 #btn-plus,
 #btn-sub {
     height: 50px;
-    min-width: 70px;
+    min-width: 40%;
     font-size: 30px;
+}
+
+@media (max-width: 1195px) {
+
+    .navbar-brand,
+    .btn-cta {
+        margin: 0px auto;
+        display: block;
+        text-align: center;
+    }
+
+    .section-img {
+        max-width: 100%;
+        width: auto;
+        height: auto;
+    }
+
+    #esfihaList {
+        display: grid;
+        grid-template-columns: repeat(2, 2fr);
+        column-gap: 30px;
+    }
 }
