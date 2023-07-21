@@ -1,3 +1,5 @@
+// menu de esfiha
+
 var esfihas = [
     { nome: 'Carne', ingredientes: 'Carne moída temperada, cebola, tomate', preco: 4.90 },
     { nome: 'Frango', ingredientes: 'Frango desfiado, requeijão cremoso', preco: 4.90 },
@@ -12,24 +14,69 @@ var esfihas = [
 ];
 
 var esfihaMenuHtml = '';
-esfihas.forEach(function (esfiha) {
+var esfihaList = '';
+esfihas.forEach(function (esfihas) {
     esfihaMenuHtml += `
-    <div class="col-md-4">
+    <div>
         <div class="esfiha-card">
-            <img src="https://via.placeholder.com/720" alt="${esfiha.nome}" class="esfiha-card-image">
-            <h5 class="esfiha-card-name">${esfiha.nome}</h5>
-            <p class="esfiha-card-description">${esfiha.ingredientes}</p>
-            <p class="esfiha-card-price">R$ ${esfiha.preco}</p>
-            <div class="option">
+            <img src="https://via.placeholder.com/720" alt="${esfihas.nome}" class="esfiha-card-image">
+            <h5 class="esfiha-card-name">${esfihas.nome}</h5>
+            <p class="esfiha-card-description">${esfihas.ingredientes}</p>
+            <p class="esfiha-card-price">R$ ${esfihas.preco}</p>
+            <div class="option" id="${esfihas.nome}">
                 <div class="display">
-                    <h4 id="qtd">0</h4>
+                    <h4 id="qtd" class="${esfihas.nome}Display">0</h4>
                 </div>
-                <a href="#" id="btn-plus" class="btn btn-primary" onclcick="adicionarList(this, 1)">-</a>
-                <a href="#" id="btn-sub" class="btn btn-primary" onclcick="removerList(this, -1)">+</a>
+                <button id="btn-plus" class="btn btn-primary" onclick="alterarQuantidade(this, 'sub')"">-</button>
+                <button id="btn-sub" class="btn btn-primary" onclick="alterarQuantidade(this, 'plus')"">+</button>
             </div>
         </div>
     </div>
     `;
+
+    esfihaList += `
+    <li>
+        <p class="esfiha-list-name"><span class="${esfihas.nome}List">0</span>x ${esfihas.nome}</p>
+        <p>R$ ${esfihas.preco}</p>
+    </li>
+    `;
 });
 
 document.querySelector('#esfihaList').innerHTML = esfihaMenuHtml;
+document.querySelector('#listaPedidos').innerHTML = esfihaList;
+
+// Quantidade
+
+function alterarQuantidade(botao, operacao) {
+    const item = botao.parentNode.id;
+    let quantidade = parseInt(document.querySelector(`.${item}Display`).innerText);
+
+    let qtdCard = document.querySelector(`.${item}Display`);
+    let qtdList = document.querySelector(`.${item}List`);
+
+    if (operacao == 'plus') {
+        quantidade++;
+    } else if (operacao == 'sub') {
+        if (quantidade > 0) {
+            quantidade--;
+        }
+    }
+
+    qtdCard.innerHTML = quantidade;
+    qtdList.innerHTML = quantidade;
+
+    revisarQuantidade()
+}
+
+// design da lista
+function revisarQuantidade() {
+    document.querySelectorAll('.esfiha-list-name').forEach((elemento) => {
+        const qtd = elemento.querySelector('span').innerText;
+        let li = elemento.parentNode;
+        if (qtd > 0) {
+            li.style.display = "flex";
+        } else {
+            li.style.display = "none";
+        }
+    });
+}
