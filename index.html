@@ -14,7 +14,19 @@
     <header>
         <nav class="navbar navbar-expand-md justify-content-between">
             <h1 class="navbar-brand">ED</h1>
-            <a class="btn btn-cta" href="#">Faça seu pedido agora</a>
+            <label for="listaBtn" class="btn btn-cta">Faça seu pedido agora</label>
+            <input type="checkbox" name="listaBtn" id="listaBtn">
+
+            <div id="pedidoList" class="container">
+                <div class="pedido-header">
+                    <p>qtd. nome do pedido</p>
+                    <p>valor</p>
+                </div>
+                <ul id="listaPedidos">
+                    <!-- Aqui serão exibidos os itens selecionados -->
+                </ul>
+                <button class="btn btn-cta" onclick="fazerPedido()">Enviar</button>
+            </div>            
         </nav>
     </header>
 
@@ -24,7 +36,7 @@
                 <div class="col-md-6 order-md-1 text-destaque">
                     <div class="section-text">
                         <h2 class="section-title">Bem-vindo à Esfiha Delícia</h2>
-                        <p class="section-description">Experimente as melhores esfihas feitas com<br>ingredientes
+                        <p class="section-description">Experimente as melhores esfihas feitas com ingredientes
                             frescos e sabores irresistíveis.</p>
                         <h2>Siga-nos nas redes sociais:</h2>
                         <ul class="social-media d-flex justify-content-between">
@@ -33,27 +45,6 @@
                             <li><a href="#"><i class="fab fa-twitter"></i></a></li>
                         </ul>
                     </div>
-                    <!-- <div class="beneficits">
-                        <h2 class="section-title">Benefícios</h2>
-                        <div class="row">
-                            <div class="col-md-6 benefit-item d-flex align-items-center">
-                                <i class="benefit-icon fas fa-clock"></i>
-                                <h3 class="benefit-title">Rápido e Prático</h3>
-                            </div>
-                            <div class="col-md-6 benefit-item d-flex align-items-center">
-                                <i class="benefit-icon fas fa-utensils"></i>
-                                <h3 class="benefit-title">Ingredientes Frescos</h3>
-                            </div>
-                            <div class="col-md-6 benefit-item d-flex align-items-center">
-                                <i class="benefit-icon fas fa-heart"></i>
-                                <h3 class="benefit-title">Amor em cada Esfiha</h3>
-                            </div>
-                            <div class="col-md-6 benefit-item d-flex align-items-center">
-                                <i class="benefit-icon fas fa-comments"></i>
-                                <h3 class="benefit-title">Atendimento Amigável</h3>
-                            </div>
-                        </div>
-                    </div> -->
                 </div>
                 <div class="col-md-6 order-md-2">
                     <img src="https://via.placeholder.com/800x500" alt="Imagem Placeholder" class="img-fluid">
@@ -65,7 +56,7 @@
             <div class="container">
                 <h2 class="section-title">Cardápio</h2>
 
-                <div class="row" id="esfihaList">
+                <div id="esfihaList">
                     <!-- Lista de esfihas -->
                 </div>
             </div>
