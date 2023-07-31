@@ -7,9 +7,9 @@ var esfihas = [
     { nome: 'Calabresa', ingredientes: 'Calabresa, cebola', preco: 4.90 },
     { nome: 'Portuguesa', ingredientes: 'Presunto, mussarela, cebola, ovo, azeitonas', preco: 5.90 },
     { nome: 'Vegetariana', ingredientes: 'Brócolis, palmito, milho, ervilha, tomate', preco: 5.90 },
-    { nome: 'Frango com Catupiry', ingredientes: 'Frango desfiado, catupiry', preco: 5.90 },
-    { nome: 'Escarola com Bacon', ingredientes: 'Escarola refogada, bacon, mussarela', preco: 5.90 },
-    { nome: 'Queijo com Tomate Seco', ingredientes: 'Mussarela, tomate seco', preco: 5.90 },
+    { nome: 'Frango-com-Catupiry', ingredientes: 'Frango desfiado, catupiry', preco: 5.90 },
+    { nome: 'Escarola-com-Bacon', ingredientes: 'Escarola refogada, bacon, mussarela', preco: 5.90 },
+    { nome: 'Queijo-com-Tomate-Seco', ingredientes: 'Mussarela, tomate seco', preco: 5.90 },
     { nome: 'Pepperoni', ingredientes: 'Pepperoni, mussarela', preco: 6.90 }
 ];
 
@@ -81,36 +81,34 @@ function revisarQuantidade() {
     });
 }
 
-// processador de pedidos
 function fazerPedido() {
     let list = document.querySelector('#listaPedidos').querySelectorAll('li');
-    let message = '';
+    let messageBefore = 0;
+
     list.forEach(e => {
-        message += e.textContent;
+        let qtd = e.querySelector('span').textContent;
+
+        if (qtd > 0) {
+            messageBefore += 1;
+        }
     })
-    console.log(message)
+
+    let message = '';
+
+    if (messageBefore > 0) {
+
+        list.forEach(e => {
+            let qtd = e.querySelector('span').textContent;
+
+            if (qtd > 0) {
+                message += e.textContent + `%0A`;
+            }
+        })
+
+        let urlWhatsApp = `https://api.whatsapp.com/send?text=${message}`;
+        window.open(urlWhatsApp, '_blank');
+
+    } else {
+        alert("Ops, parece que você esqueceu de selecionar um produto...");
+    }
 }
-
-// function fazerPedido() {
-//     let list = document.querySelector('#listaPedidos').querySelectorAll('li');
-//     let message = '';
-
-//     if (list.length > 0) {
-
-//         list.forEach((items) => {
-//             document.querySelectorAll('.esfiha-list-name').forEach((elemento) => {
-//                 const qtd = elemento.querySelector('span').innerText;
-//                 let li = elemento.parentNode;
-//                 if (qtd > 0) {
-//                     message += items.textContent + `%0A`;
-//                 }
-//             });
-//         })
-
-//         let urlWhatsApp = `https://api.whatsapp.com/send?text=${message}`;
-//         window.open(urlWhatsApp, '_blank');
-
-//     } else {
-//         alert("Ops, parece que você esqueceu de selecionar alguma coisa...");
-//     }
-// }
