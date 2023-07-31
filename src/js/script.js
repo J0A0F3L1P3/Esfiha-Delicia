@@ -80,3 +80,37 @@ function revisarQuantidade() {
         }
     });
 }
+
+// processador de pedidos
+function fazerPedido() {
+    let list = document.querySelector('#listaPedidos').querySelectorAll('li');
+    let message = '';
+    list.forEach(e => {
+        message += e.textContent;
+    })
+    console.log(message)
+}
+
+// function fazerPedido() {
+//     let list = document.querySelector('#listaPedidos').querySelectorAll('li');
+//     let message = '';
+
+//     if (list.length > 0) {
+
+//         list.forEach((items) => {
+//             document.querySelectorAll('.esfiha-list-name').forEach((elemento) => {
+//                 const qtd = elemento.querySelector('span').innerText;
+//                 let li = elemento.parentNode;
+//                 if (qtd > 0) {
+//                     message += items.textContent + `%0A`;
+//                 }
+//             });
+//         })
+
+//         let urlWhatsApp = `https://api.whatsapp.com/send?text=${message}`;
+//         window.open(urlWhatsApp, '_blank');
+
+//     } else {
+//         alert("Ops, parece que você esqueceu de selecionar alguma coisa...");
+//     }
+// }
