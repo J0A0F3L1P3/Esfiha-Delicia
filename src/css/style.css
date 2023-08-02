@@ -151,12 +151,6 @@ header {
     width: 100%;
 }
 
-#esfihaList {
-    display: grid;
-    grid-template-columns: repeat(3, 2fr);
-    column-gap: 30px;
-}
-
 .esfiha-card {
     background-color: #444;
     /* height: 475px; */
@@ -220,11 +214,5 @@ header {
         max-width: 100%;
         width: auto;
         height: auto;
-    }
-
-    #esfihaList {
-        display: grid;
-        grid-template-columns: repeat(2, 2fr);
-        column-gap: 30px;
     }
 }
