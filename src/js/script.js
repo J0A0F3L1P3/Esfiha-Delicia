@@ -17,7 +17,7 @@ var esfihaMenuHtml = '';
 var esfihaList = '';
 esfihas.forEach(function (esfihas) {
     esfihaMenuHtml += `
-    <div class="col-12 col-sm-1 col-md-6 col-lg-4">
+    <div class="col-12 col-sm-12 col-md-6 col-lg-4">
         <div class="esfiha-card">
             <img src="https://via.placeholder.com/720" alt="${esfihas.nome}" class="esfiha-card-image">
             <h5 class="esfiha-card-name">${esfihas.nome}</h5>
