@@ -101,7 +101,7 @@ function fazerPedido() {
             let qtd = e.querySelector('span').textContent;
 
             if (qtd > 0) {
-                message += e.textContent + `%0A`;
+                message += '%0A' + e.textContent;
             }
         })
 
